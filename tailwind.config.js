@@ -43,6 +43,11 @@ export default {
         wide: '1440px',
       },
 
+      gridTemplateColumns: {
+        'auto-fill-250': 'repeat(auto-fill, minmax(250px, 1fr))',
+        'auto-fit-250': 'repeat(auto-fit, minmax(250px, 1fr))',
+      },
+
       content: {
         cartIcon: 'url("./assets/images/icon-add-to-cart.svg")',
         carbonNeutralIcon: 'url("./assets/images/icon-carbon-neutral.svg")',
@@ -54,7 +59,7 @@ export default {
       addBase({}),
         addComponents({
           '.container': {
-            '@apply max-w-[75rem] mx-auto py-6 px-5 md:px-10 lg:p-14 xl:max-w-[85rem]': {},
+            '@apply max-w-[70rem] mx-auto py-6 px-5 sm:p-10': {},
           },
 
           '.heading1': {

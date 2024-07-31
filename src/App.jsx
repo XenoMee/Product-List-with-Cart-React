@@ -9,6 +9,11 @@ const App = () => {
 
   const increaseItemQuantity = (id, quantity) => {
     setItemQuantity((prevItemQuantity) => prevItemQuantity + 1);
+    setProducts((prevProducts) =>
+      prevProducts.map((product) => {
+        product.id === id ? { ...product, quantity: quantity } : product;
+      })
+    );
   };
 
   const decreaseItemQuantity = () => {
@@ -17,10 +22,10 @@ const App = () => {
 
   return (
     <>
-      <div className='container grid gap-8'>
-        <div>
+      <div className='container grid gap-8 lg:grid-cols-[.7fr_.3fr] lg:gap-10'>
+        <div className='grid gap-8'>
           <h1 className='heading1'>Desserts</h1>
-          <ul className='grid gap-8' role='list'>
+          <ul className='grid max-w-[800px] ss:grid-cols-auto-fit-250 sm:grid-cols-3 gap-8' role='list'>
             {products.map((product) => (
               <li key={product.id}>
                 <Dessert
