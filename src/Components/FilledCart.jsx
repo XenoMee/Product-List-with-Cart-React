@@ -7,10 +7,10 @@ const FilledCart = ({ amountItems, availableItems }) => {
   }, 0);
 
   return (
-    <aside className='bg-white p-5 rounded-md grid gap-4 content-start'>
+    <aside className='bg-white p-5 rounded-md grid gap-5 content-start'>
       <h2 className='heading2'>Your cart ({amountItems})</h2>
 
-      <ul role='list'>
+      <ul className='grid gap-4' role='list'>
         {availableItems.map((item) => (
           <CartItem key={item.id} name={item.name} amount={item.quantity} price={item.price} />
         ))}
@@ -21,7 +21,7 @@ const FilledCart = ({ amountItems, availableItems }) => {
         <p className='font-bold'>${totalPrice.toFixed(2)}</p>
       </div>
 
-      <div className='carbonNeutral bg-rose-50 text-rose-900 py-4 px-6 flex gap-2 justify-center items-center rounded-xl'>
+      <div className='carbonNeutral bg-rose-50 text-rose-900 p-4 flex gap-2 justify-center items-center rounded-xl'>
         <p>
           This is <span className='font-bold'> carbon-neutral </span> delivery
         </p>
