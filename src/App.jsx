@@ -4,9 +4,11 @@ import updateProductQuantity from './Utilities/updateProductQuantity';
 import Dessert from './Components/Dessert';
 import EmptyCart from './Components/EmptyCart';
 import FilledCart from './Components/FilledCart';
+import OrderConfirmation from './Components/OrderConfirmation';
 
 const App = () => {
   const [products, setProducts] = useState(data);
+  const [modal, setModal] = useState(false);
 
   const increaseItemQuantity = (id, quantity = 1) => {
     setProducts(updateProductQuantity({ id, products, quantity }));
@@ -15,6 +17,8 @@ const App = () => {
   const decreaseItemQuantity = (id, quantity = 1) => {
     setProducts(updateProductQuantity({ id, products, quantity: -quantity }));
   };
+
+  const toggleModal = () => setModal((prevModal) => !prevModal);
 
   const totalCartItems = products.reduce((total, product) => {
     return total + product.quantity;
@@ -45,7 +49,13 @@ const App = () => {
           </ul>
         </div>
 
-        {totalCartItems ? <FilledCart amountItems={totalCartItems} availableItems={cartItems} /> : <EmptyCart />}
+        {totalCartItems ? (
+          <FilledCart amountItems={totalCartItems} availableItems={cartItems} toggleModal={toggleModal} />
+        ) : (
+          <EmptyCart />
+        )}
+
+        <OrderConfirmation toggleModal={toggleModal} modalActive={modal} chosenItems={cartItems} />
       </div>
     </>
   );

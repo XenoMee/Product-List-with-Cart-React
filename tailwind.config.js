@@ -28,6 +28,7 @@ export default {
           500: 'hsl(12, 20%, 44%)',
           900: 'hsl(14, 65%, 9%)',
         },
+        backdrop: 'rgba(0,0,0,0.5)',
       },
 
       fontFamily: {
@@ -51,6 +52,7 @@ export default {
       content: {
         cartIcon: 'url("./assets/images/icon-add-to-cart.svg")',
         carbonNeutralIcon: 'url("./assets/images/icon-carbon-neutral.svg")',
+        confirmedIcon: 'url("./assets/images/icon-order-confirmed.svg")',
       },
     },
   },
@@ -61,12 +63,20 @@ export default {
           '.container': {
             '@apply max-w-[70rem] mx-auto py-6 px-5 sm:p-10': {},
           },
-
+          '.modal': {
+            '@apply fixed inset-0 m-auto rounded-lg h-[717px] sm:w-[688px] sm:h-[685px]': {},
+          },
           '.heading1': {
             '@apply font-bold text-rose-900 text-[2.5rem] leading-[1.2]': {},
           },
           '.heading2': {
-            '@apply font-bold text-primary text-[1.5rem]': {},
+            '@apply font-bold text-rose-900 text-[1.5rem]': {},
+          },
+          '.heading3': {
+            '@apply font-bold text-rose-900 text-base': {},
+          },
+          '.heading4': {
+            '@apply font-bold text-rose-900 text-sm': {},
           },
           '.button': {
             '@apply font-semibold py-2 px-6 rounded-full cursor-pointer': {},
@@ -78,6 +88,9 @@ export default {
           '.carbonNeutral': {
             '@apply flex justify-center items-center before:content-carbonNeutralIcon before:w-[21px] before:h-[20px]':
               {},
+          },
+          '.orderConfirmed': {
+            '@apply before:content-confirmedIcon before:w-[48px] before:h-[48px]': {},
           },
         }),
         addUtilities({});

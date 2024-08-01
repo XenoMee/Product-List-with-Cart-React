@@ -1,11 +1,8 @@
 import React from 'react';
 import CartItem from './CartItem';
+import totalPrice from '../Utilities/calculateTotalPrice';
 
-const FilledCart = ({ amountItems, availableItems }) => {
-  const totalPrice = availableItems.reduce((totalPrice, item) => {
-    return totalPrice + item.price * item.quantity;
-  }, 0);
-
+const FilledCart = ({ amountItems, availableItems, toggleModal }) => {
   return (
     <aside className='bg-white p-5 rounded-md grid gap-5 content-start'>
       <h2 className='heading2'>Your cart ({amountItems})</h2>
@@ -18,7 +15,7 @@ const FilledCart = ({ amountItems, availableItems }) => {
 
       <div className='flex justify-between items-center text-rose-900'>
         <p>Order total</p>
-        <p className='font-bold'>${totalPrice.toFixed(2)}</p>
+        <p className='font-bold text-2xl'>${totalPrice(availableItems).toFixed(2)}</p>
       </div>
 
       <div className='carbonNeutral bg-rose-50 text-rose-900 p-4 flex gap-2 justify-center items-center rounded-xl'>
@@ -27,7 +24,10 @@ const FilledCart = ({ amountItems, availableItems }) => {
         </p>
       </div>
 
-      <button className='button py-4 bg-primary text-white text-base hover:text-white hover:bg-primary-dark'>
+      <button
+        className='button py-4 bg-primary text-white text-base hover:text-white hover:bg-primary-dark'
+        onClick={toggleModal}
+      >
         Confirm Order
       </button>
     </aside>
