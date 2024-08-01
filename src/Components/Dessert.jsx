@@ -2,7 +2,7 @@ import React from 'react';
 import CartButton from './CartButton';
 import ItemQuantityButton from './ItemQuantityButton';
 
-const Dessert = ({ id, name, price, category, quantity, image, addItem, removeItem }) => {
+const Dessert = ({name, price, category, quantity, image, addItem, removeItem }) => {
   return (
     <div className='grid gap-10 relative'>
       <div className='grid'>
@@ -23,7 +23,7 @@ const Dessert = ({ id, name, price, category, quantity, image, addItem, removeIt
       {quantity ? (
         <ItemQuantityButton itemQuantity={quantity} increaseQuantity={addItem} decreaseQuantity={removeItem} />
       ) : (
-        <CartButton addItemToCart={() => addItem(id, quantity)} />
+        <CartButton addItemToCart={addItem} />
       )}
     </div>
   );

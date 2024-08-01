@@ -1,23 +1,18 @@
 import React, { useState } from 'react';
 import data from './Data/data';
+import updateProductQuantity from "./Utilities/updateProductQuantity";
 import Dessert from './Components/Dessert';
 import EmptyCart from './Components/EmptyCart';
 
 const App = () => {
   const [products, setProducts] = useState(data);
-  const [itemQuantity, setItemQuantity] = useState(0);
 
-  const increaseItemQuantity = (id, quantity) => {
-    setItemQuantity((prevItemQuantity) => prevItemQuantity + 1);
-    setProducts((prevProducts) =>
-      prevProducts.map((product) => {
-        product.id === id ? { ...product, quantity: quantity } : product;
-      })
-    );
+  const increaseItemQuantity = (id, quantity = 1) => {
+    setProducts(updateProductQuantity({id, products, quantity}))
   };
 
-  const decreaseItemQuantity = () => {
-    setItemQuantity((prevItemQuantity) => prevItemQuantity - 1);
+  const decreaseItemQuantity = (id, quantity = 1) => {
+    setProducts(updateProductQuantity({id, products, quantity: -quantity}))
   };
 
   return (
@@ -29,15 +24,14 @@ const App = () => {
             {products.map((product) => (
               <li key={product.id}>
                 <Dessert
-                  id={product.id}
                   name={product.name}
                   title={product.title}
                   category={product.category}
                   price={product.price}
-                  quantity={itemQuantity}
+                  quantity={product.quantity}
                   image={product.image}
-                  addItem={increaseItemQuantity}
-                  removeItem={decreaseItemQuantity}
+                  addItem={() => increaseItemQuantity(product.id)}
+                  removeItem={() => decreaseItemQuantity(product.id)}
                 />
               </li>
             ))}
