@@ -92,6 +92,9 @@ export default {
           '.orderConfirmed': {
             '@apply before:content-confirmedIcon before:w-[48px] before:h-[48px]': {},
           },
+          '.overlay': {
+            '@apply fixed w-[100vw] h-[100vh] inset-0 bg-[rgba(0,0,0,0.5)]': {},
+          },
         }),
         addUtilities({});
     }),
