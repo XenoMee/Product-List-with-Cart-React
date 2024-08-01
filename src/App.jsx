@@ -19,6 +19,7 @@ const App = () => {
     setProducts(updateProductQuantity({ id, products, quantity: -quantity }));
   };
 
+  const startNewOrder = () => setProducts(data);
   const toggleModal = () => setModal((prevModal) => !prevModal);
   const cartItems = products.filter((product) => product.quantity > 0);
 
@@ -51,7 +52,12 @@ const App = () => {
           <EmptyCart />
         )}
 
-        <OrderConfirmation toggleModal={toggleModal} modalActive={modal} chosenItems={cartItems} />
+        <OrderConfirmation
+          toggleModal={toggleModal}
+          modalActive={modal}
+          chosenItems={cartItems}
+          newOrder={startNewOrder}
+        />
       </div>
     </>
   );

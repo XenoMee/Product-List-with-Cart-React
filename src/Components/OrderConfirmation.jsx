@@ -2,7 +2,7 @@ import React from 'react';
 import OrderItem from './OrderItem';
 import totalPrice from '../Utilities/calculateTotalPrice';
 
-const OrderConfirmation = ({ toggleModal, modalActive, chosenItems }) => {
+const OrderConfirmation = ({ toggleModal, modalActive, chosenItems, newOrder }) => {
   return (
     <div className={`${modalActive ? 'overlay' : ''}`}>
       <div
@@ -38,7 +38,10 @@ const OrderConfirmation = ({ toggleModal, modalActive, chosenItems }) => {
 
           <button
             className='button py-4 bg-primary text-white text-base hover:text-white hover:bg-primary-dark'
-            onClick={toggleModal}
+            onClick={() => {
+              toggleModal();
+              newOrder();
+            }}
           >
             Start New Order
           </button>
