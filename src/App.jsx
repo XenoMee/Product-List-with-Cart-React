@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import data from './Data/data';
 import updateProductQuantity from './Utilities/updateProductQuantity';
+import totalCartItems from './Utilities/calculateTotalItems';
 import Dessert from './Components/Dessert';
 import EmptyCart from './Components/EmptyCart';
 import FilledCart from './Components/FilledCart';
@@ -19,11 +20,6 @@ const App = () => {
   };
 
   const toggleModal = () => setModal((prevModal) => !prevModal);
-
-  const totalCartItems = products.reduce((total, product) => {
-    return total + product.quantity;
-  }, 0);
-
   const cartItems = products.filter((product) => product.quantity > 0);
 
   return (
@@ -50,7 +46,7 @@ const App = () => {
         </div>
 
         {totalCartItems ? (
-          <FilledCart amountItems={totalCartItems} availableItems={cartItems} toggleModal={toggleModal} />
+          <FilledCart amountItems={totalCartItems(products)} availableItems={cartItems} toggleModal={toggleModal} />
         ) : (
           <EmptyCart />
         )}
