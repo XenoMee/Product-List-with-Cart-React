@@ -45,7 +45,7 @@ const App = () => {
           </ul>
         </div>
 
-        {totalCartItems ? (
+        {totalCartItems(products) ? (
           <FilledCart amountItems={totalCartItems(products)} availableItems={cartItems} toggleModal={toggleModal} />
         ) : (
           <EmptyCart />
