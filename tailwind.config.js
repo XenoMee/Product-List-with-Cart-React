@@ -61,7 +61,7 @@ export default {
       addBase({}),
         addComponents({
           '.container': {
-            '@apply max-w-[70rem] mx-auto py-6 px-5 sm:p-10': {},
+            '@apply max-w-[70rem] mx-auto py-6 px-5 sm:p-10 lg:max-w-[80rem]': {},
           },
           '.modal': {
             '@apply fixed inset-0 m-auto rounded-lg h-[717px] sm:w-[688px] sm:h-[685px]': {},
