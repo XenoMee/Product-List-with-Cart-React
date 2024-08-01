@@ -1,19 +1,26 @@
 import React, { useState } from 'react';
 import data from './Data/data';
-import updateProductQuantity from "./Utilities/updateProductQuantity";
+import updateProductQuantity from './Utilities/updateProductQuantity';
 import Dessert from './Components/Dessert';
 import EmptyCart from './Components/EmptyCart';
+import FilledCart from './Components/FilledCart';
 
 const App = () => {
   const [products, setProducts] = useState(data);
 
   const increaseItemQuantity = (id, quantity = 1) => {
-    setProducts(updateProductQuantity({id, products, quantity}))
+    setProducts(updateProductQuantity({ id, products, quantity }));
   };
 
   const decreaseItemQuantity = (id, quantity = 1) => {
-    setProducts(updateProductQuantity({id, products, quantity: -quantity}))
+    setProducts(updateProductQuantity({ id, products, quantity: -quantity }));
   };
+
+  const totalCartItems = products.reduce((total, product) => {
+    return total + product.quantity;
+  }, 0);
+
+  const cartItems = products.filter((product) => product.quantity > 0);
 
   return (
     <>
@@ -38,7 +45,7 @@ const App = () => {
           </ul>
         </div>
 
-        <EmptyCart />
+        {totalCartItems ? <FilledCart amountItems={totalCartItems} availableItems={cartItems} /> : <EmptyCart />}
       </div>
     </>
   );
