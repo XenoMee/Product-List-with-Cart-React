@@ -5,7 +5,7 @@ import totalPrice from '../Utilities/calculateTotalPrice';
 const FilledCart = ({ amountItems, availableItems, toggleModal }) => {
   return (
     <aside className='bg-white p-5 rounded-md grid gap-5 content-start'>
-      <h2 className='heading2'>Your cart ({amountItems})</h2>
+      <h2 className='heading2 text-primary'>Your cart ({amountItems})</h2>
 
       <ul className='grid gap-4' role='list'>
         {availableItems.map((item) => (
