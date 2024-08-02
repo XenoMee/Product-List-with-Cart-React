@@ -2,10 +2,10 @@ export default [
   {
     id: 1,
     image: {
-      thumbnail: '../../public/images/image-waffle-thumbnail.jpg',
-      mobile: '../../public/images/image-waffle-mobile.jpg',
-      tablet: '../../public/images/image-waffle-tablet.jpg',
-      desktop: '../../public/images/image-waffle-desktop.jpg',
+      thumbnail: './public/images/image-waffle-thumbnail.jpg',
+      mobile: './public/images/image-waffle-mobile.jpg',
+      tablet: './public/images/image-waffle-tablet.jpg',
+      desktop: './public/images/image-waffle-desktop.jpg',
     },
     name: 'Waffle with Berries',
     category: 'Waffle',
@@ -15,10 +15,10 @@ export default [
   {
     id: 2,
     image: {
-      thumbnail: '../../public/images/image-creme-brulee-thumbnail.jpg',
-      mobile: '../../public/images/image-creme-brulee-mobile.jpg',
-      tablet: '../../public/images/image-creme-brulee-tablet.jpg',
-      desktop: '../../public/images/image-creme-brulee-desktop.jpg',
+      thumbnail: './public/images/image-creme-brulee-thumbnail.jpg',
+      mobile: './public/images/image-creme-brulee-mobile.jpg',
+      tablet: './public/images/image-creme-brulee-tablet.jpg',
+      desktop: './public/images/image-creme-brulee-desktop.jpg',
     },
     name: 'Vanilla Bean Crème Brûlée',
     category: 'Crème Brûlée',
@@ -28,10 +28,10 @@ export default [
   {
     id: 3,
     image: {
-      thumbnail: '../../public/images/image-macaron-thumbnail.jpg',
-      mobile: '../../public/images/image-macaron-mobile.jpg',
-      tablet: '../../public/images/image-macaron-tablet.jpg',
-      desktop: '../../public/images/image-macaron-desktop.jpg',
+      thumbnail: './public/images/image-macaron-thumbnail.jpg',
+      mobile: './public/images/image-macaron-mobile.jpg',
+      tablet: './public/images/image-macaron-tablet.jpg',
+      desktop: './public/images/image-macaron-desktop.jpg',
     },
     name: 'Macaron Mix of Five',
     category: 'Macaron',
@@ -41,10 +41,10 @@ export default [
   {
     id: 4,
     image: {
-      thumbnail: '../../public/images/image-tiramisu-thumbnail.jpg',
-      mobile: '../../public/images/image-tiramisu-mobile.jpg',
-      tablet: '../../public/images/image-tiramisu-tablet.jpg',
-      desktop: '../../public/images/image-tiramisu-desktop.jpg',
+      thumbnail: './public/images/image-tiramisu-thumbnail.jpg',
+      mobile: './public/images/image-tiramisu-mobile.jpg',
+      tablet: './public/images/image-tiramisu-tablet.jpg',
+      desktop: './public/images/image-tiramisu-desktop.jpg',
     },
     name: 'Classic Tiramisu',
     category: 'Tiramisu',
@@ -54,10 +54,10 @@ export default [
   {
     id: 5,
     image: {
-      thumbnail: '../../public/images/image-baklava-thumbnail.jpg',
-      mobile: '../../public/images/image-baklava-mobile.jpg',
-      tablet: '../../public/images/image-baklava-tablet.jpg',
-      desktop: '../../public/images/image-baklava-desktop.jpg',
+      thumbnail: './public/images/image-baklava-thumbnail.jpg',
+      mobile: './public/images/image-baklava-mobile.jpg',
+      tablet: './public/images/image-baklava-tablet.jpg',
+      desktop: './public/images/image-baklava-desktop.jpg',
     },
     name: 'Pistachio Baklava',
     category: 'Baklava',
@@ -67,10 +67,10 @@ export default [
   {
     id: 6,
     image: {
-      thumbnail: '../../public/images/image-meringue-thumbnail.jpg',
-      mobile: '../../public/images/image-meringue-mobile.jpg',
-      tablet: '../../public/images/image-meringue-tablet.jpg',
-      desktop: '../../public/images/image-meringue-desktop.jpg',
+      thumbnail: './public/images/image-meringue-thumbnail.jpg',
+      mobile: './public/images/image-meringue-mobile.jpg',
+      tablet: './public/images/image-meringue-tablet.jpg',
+      desktop: './public/images/image-meringue-desktop.jpg',
     },
     name: 'Lemon Meringue Pie',
     category: 'Pie',
@@ -80,10 +80,10 @@ export default [
   {
     id: 7,
     image: {
-      thumbnail: '../../public/images/image-cake-thumbnail.jpg',
-      mobile: '../../public/images/image-cake-mobile.jpg',
-      tablet: '../../public/images/image-cake-tablet.jpg',
-      desktop: '../../public/images/image-cake-desktop.jpg',
+      thumbnail: './public/images/image-cake-thumbnail.jpg',
+      mobile: './public/images/image-cake-mobile.jpg',
+      tablet: './public/images/image-cake-tablet.jpg',
+      desktop: './public/images/image-cake-desktop.jpg',
     },
     name: 'Red Velvet Cake',
     category: 'Cake',
@@ -93,10 +93,10 @@ export default [
   {
     id: 8,
     image: {
-      thumbnail: '../../public/images/image-brownie-thumbnail.jpg',
-      mobile: '../../public/images/image-brownie-mobile.jpg',
-      tablet: '../../public/images/image-brownie-tablet.jpg',
-      desktop: '../../public/images/image-brownie-desktop.jpg',
+      thumbnail: './public/images/image-brownie-thumbnail.jpg',
+      mobile: './public/images/image-brownie-mobile.jpg',
+      tablet: './public/images/image-brownie-tablet.jpg',
+      desktop: './public/images/image-brownie-desktop.jpg',
     },
     name: 'Salted Caramel Brownie',
     category: 'Brownie',
@@ -106,10 +106,10 @@ export default [
   {
     id: 9,
     image: {
-      thumbnail: '../../public/images/image-panna-cotta-thumbnail.jpg',
-      mobile: '../../public/images/image-panna-cotta-mobile.jpg',
-      tablet: '../../public/images/image-panna-cotta-tablet.jpg',
-      desktop: '../../public/images/image-panna-cotta-desktop.jpg',
+      thumbnail: './public/images/image-panna-cotta-thumbnail.jpg',
+      mobile: './public/images/image-panna-cotta-mobile.jpg',
+      tablet: './public/images/image-panna-cotta-tablet.jpg',
+      desktop: './public/images/image-panna-cotta-desktop.jpg',
     },
     name: 'Vanilla Panna Cotta',
     category: 'Panna Cotta',
