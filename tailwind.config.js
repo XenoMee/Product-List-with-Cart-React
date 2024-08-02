@@ -65,7 +65,7 @@ export default {
             '@apply max-w-[70rem] mx-auto py-6 px-5 sm:p-10 lg:max-w-[80rem]': {},
           },
           '.modal': {
-            '@apply fixed inset-0 overflow-x-hidden overflow-y-auto z-50 m-auto rounded-lg h-[717px] sm:w-[688px] sm:h-[685px] xs:px-6 xs:pt-10 xs:pb-6 xxs:mb-0 xxs:px-3 xxs:py-4':
+            '@apply fixed inset-0 overflow-x-hidden overflow-y-auto z-50 m-auto rounded-lg sm:h-[717px] xxs:h-[90vh] sm:w-[688px] sm:h-[685px] xs:px-6 xs:pt-10 xs:pb-6 xxs:mb-0 xxs:px-3 xxs:py-4':
               {},
           },
           '.heading1': {
