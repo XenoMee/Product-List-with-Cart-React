@@ -47,7 +47,13 @@ const App = () => {
         </div>
 
         {totalCartItems(products) ? (
-          <FilledCart amountItems={totalCartItems(products)} availableItems={cartItems} toggleModal={toggleModal} />
+          <FilledCart
+            amountItems={totalCartItems(products)}
+            availableItems={cartItems}
+            toggleModal={toggleModal}
+            products={products}
+            setProducts={setProducts}
+          />
         ) : (
           <EmptyCart />
         )}

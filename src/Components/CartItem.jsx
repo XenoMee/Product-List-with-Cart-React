@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CartItem = ({ name, amount, price }) => {
+const CartItem = ({ name, amount, price, removeItem }) => {
   return (
     <li className='flex justify-between items-center border-b-2 border-rose-100'>
       <div className='grid'>
@@ -10,7 +10,10 @@ const CartItem = ({ name, amount, price }) => {
           <span className='text-rose-500 font-bold'>${price.toFixed(2)}</span>
         </div>
       </div>
-      <button className='flex items-center justify-center border border-rose-400 w-5 h-5 rounded-full'>
+      <button
+        onClick={removeItem}
+        className='flex items-center justify-center border border-rose-400 w-5 h-5 rounded-full'
+      >
         <svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='none' viewBox='0 0 10 10'>
           <path
             fill='#CAAFA7'

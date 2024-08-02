@@ -1,15 +1,26 @@
 import React from 'react';
 import CartItem from './CartItem';
 import totalPrice from '../Utilities/calculateTotalPrice';
+import resetProductQuantity from '../Utilities/resetProductQuantity';
 
-const FilledCart = ({ amountItems, availableItems, toggleModal }) => {
+const FilledCart = ({ amountItems, availableItems, toggleModal, products, setProducts }) => {
+  const removeItemFromCart = (id) => {
+    setProducts(resetProductQuantity({ id, products }));
+  };
+
   return (
     <aside className='bg-white p-5 rounded-md grid gap-5 content-start'>
       <h2 className='heading2 text-primary'>Your cart ({amountItems})</h2>
 
       <ul className='grid gap-4' role='list'>
         {availableItems.map((item) => (
-          <CartItem key={item.id} name={item.name} amount={item.quantity} price={item.price} />
+          <CartItem
+            key={item.id}
+            name={item.name}
+            amount={item.quantity}
+            price={item.price}
+            removeItem={() => removeItemFromCart(item.id)}
+          />
         ))}
       </ul>
 
