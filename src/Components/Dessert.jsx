@@ -10,7 +10,7 @@ const Dessert = ({ name, price, category, quantity, image, addItem, removeItem }
         <p className='-order-1 text-rose-500 text-sm'>{category}</p>
         <span className='text-primary text-base font-semibold '>${price.toFixed(2)}</span>
       </div>
-      <picture className='-order-1' role='img'>
+      <picture className='-order-1'>
         <source media='(min-width: 785px)' srcSet={`${image.tablet}`} />
         <source media='(min-width: 1024px)' srcSet={`${image.desktop}`} />
         <img
