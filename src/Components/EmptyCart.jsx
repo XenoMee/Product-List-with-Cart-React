@@ -1,5 +1,5 @@
 import React from 'react';
-import emptyCartImg from '../../assets/images/illustration-empty-cart.svg';
+import emptyCartImg from '../../public/images/illustration-empty-cart.svg';
 
 const EmptyCart = () => (
   <aside className='bg-white sm:max-h-[300px] p-5 rounded-md grid gap-8'>
