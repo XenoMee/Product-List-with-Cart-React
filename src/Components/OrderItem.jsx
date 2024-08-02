@@ -1,8 +1,8 @@
 import React from 'react';
 
 const OrderItem = ({ name, amount, price, image }) => (
-  <li className='flex justify-between items-center border-b-2 pb-4 last:pb-6 border-rose-100'>
-    <div className='grid grid-cols-[1fr_max-content] xs:gap-3 gap-4'>
+  <li className='flex justify-between items-center border-b-2 xxs:pb-2 xxs:last:pb-4 pb-4 last:pb-6 border-rose-100'>
+    <div className='grid grid-cols-[1fr_max-content] xs:gap-3 xxs:gap-2 gap-4'>
       <img className='rounded-xl w-12 h-12 justify-center' src={image.thumbnail} alt={name} />
 
       <div className='grid grid-rows-[min-content_min-content] gap-1'>

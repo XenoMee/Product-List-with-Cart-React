@@ -18,8 +18,8 @@ const OrderConfirmation = ({ toggleModal, modalActive, chosenItems, newOrder }) 
             <p>We hope you enjoy your food!</p>
           </div>
 
-          <div className='bg-rose-50 p-6 rounded-lg'>
-            <ul className='grid gap-4' role='list'>
+          <div className='bg-rose-50 p-6 xxs:p-4 rounded-lg'>
+            <ul className='grid gap-4 xxs:gap-2' role='list'>
               {chosenItems.map((item) => (
                 <OrderItem
                   key={item.id}
