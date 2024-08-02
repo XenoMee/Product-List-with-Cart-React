@@ -6,7 +6,7 @@ const OrderItem = ({ name, amount, price, image }) => (
       <img className='rounded-xl w-12 h-12 justify-center' src={image.thumbnail} alt={name} />
 
       <div className='grid grid-rows-[min-content_min-content] gap-1'>
-        <h4 className='heading4 ellipsis'>{name}</h4>
+        <p className='heading4 ellipsis'>{name}</p>
         <div className='flex xs:gap-3 sm:justify-between items-center sm:max-w-24'>
           <span className='text-primary font-bold'>{amount}x</span>
           <span className='text-rose-400'>@ ${price.toFixed(2)}</span>

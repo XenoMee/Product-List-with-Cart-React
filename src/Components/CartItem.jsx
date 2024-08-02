@@ -4,7 +4,7 @@ const CartItem = ({ name, amount, price, removeItem }) => {
   return (
     <li className='flex justify-between items-center border-b-2 border-rose-100'>
       <div className='grid'>
-        <h4 className='heading4'>{name}</h4>
+        <p className='heading4'>{name}</p>
         <div className='flex justify-between items-center max-w-24 mb-3'>
           <span className='text-primary font-bold'>{amount}x</span>
           <span className='text-rose-500 font-bold'>${price.toFixed(2)}</span>
