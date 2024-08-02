@@ -8,7 +8,7 @@ const OrderConfirmation = ({ toggleModal, modalActive, chosenItems, newOrder }) 
       <div
         className={`modal orderConfirmed grid grid-rows-[min-content_max-content] gap-6 bg-white origin-center ${
           modalActive ? 'scale-100' : 'scale-0'
-        }  transition-transform delay-150 ease-in`}
+        }  transition-transform delay-150 ease-in sm:mb-auto`}
         aria-hidden={`${!modalActive}`}
       >
         <div className='grid gap-10 sm:text-base'>
