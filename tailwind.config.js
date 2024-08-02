@@ -38,7 +38,7 @@ export default {
       screens: {
         xs: '375px',
         ss: '620px',
-        sm: '768px',
+        sm: '785px',
         md: '1060px',
         lg: '1200px',
         wide: '1440px',
@@ -64,7 +64,8 @@ export default {
             '@apply max-w-[70rem] mx-auto py-6 px-5 sm:p-10 lg:max-w-[80rem]': {},
           },
           '.modal': {
-            '@apply fixed inset-0 m-auto rounded-lg h-[717px] sm:w-[688px] sm:h-[685px]': {},
+            '@apply fixed inset-0 overflow-x-hidden overflow-y-auto z-50 m-auto rounded-lg h-[717px] sm:w-[688px] sm:h-[685px] xs:px-6 xs:pt-10 xs:pb-6 xs:mb-0':
+              {},
           },
           '.heading1': {
             '@apply font-bold text-rose-900 text-[2.5rem] leading-[1.2]': {},
@@ -79,10 +80,10 @@ export default {
             '@apply font-bold text-rose-900 text-sm': {},
           },
           '.button': {
-            '@apply font-semibold py-2 px-6 rounded-full cursor-pointer': {},
+            '@apply font-semibold py-2 px-6 rounded-full cursor-pointer transition delay-100 ease-in': {},
           },
           '.cart-btn': {
-            '@apply flex justify-center items-center gap-2 bg-white text-rose-900 absolute justify-self-center bottom-[90px] border-[1px] border-rose-400 hover:text-primary hover:border-primary hover:bg-rose-50 before:content-cartIcon before:w-[19px] before:h-[21px]':
+            '@apply flex justify-center items-center gap-2 bg-white text-rose-900 absolute justify-self-center bottom-[90px] border-[1px] border-rose-400 hover:text-primary hover:border-primary hover:bg-rose-50 before:content-cartIcon before:w-[19px] before:h-[21px] transition scale-100 delay-150 ease-in hover:scale-110 focus:scale-110 focus:border-primary focus:outline-none focus:ring-0 focus:bg-rose-50 focus:text-primary':
               {},
           },
           '.carbonNeutral': {
@@ -94,6 +95,9 @@ export default {
           },
           '.overlay': {
             '@apply fixed w-[100vw] h-[100vh] inset-0 bg-[rgba(0,0,0,0.5)]': {},
+          },
+          '.ellipsis': {
+            '@apply w-[160px] text-ellipsis overflow-hidden whitespace-nowrap': {},
           },
         }),
         addUtilities({});

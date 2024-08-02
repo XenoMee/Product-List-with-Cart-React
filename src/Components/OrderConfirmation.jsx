@@ -6,18 +6,18 @@ const OrderConfirmation = ({ toggleModal, modalActive, chosenItems, newOrder }) 
   return (
     <div className={`${modalActive ? 'overlay' : ''}`}>
       <div
-        className={`modal orderConfirmed grid grid-rows-[min-content_max-content] gap-6 bg-white p-10 origin-center ${
+        className={`modal orderConfirmed grid grid-rows-[min-content_max-content] gap-6 bg-white origin-center ${
           modalActive ? 'scale-100' : 'scale-0'
-        }  transition-transform delay-150 ease-in overflow-y-scroll`}
+        }  transition-transform delay-150 ease-in`}
         aria-hidden={`${!modalActive}`}
       >
-        <div className='grid gap-10 text-base'>
+        <div className='grid gap-10 sm:text-base'>
           <div>
-            <h2 className='heading1'>Order confirmed</h2>
+            <h2 className='heading1'>Order Confirmed</h2>
             <p>We hope you enjoy your food!</p>
           </div>
 
-          <div className='bg-rose-50 px-8 py-2'>
+          <div className='bg-rose-50 p-6 rounded-lg'>
             <ul className='grid gap-4' role='list'>
               {chosenItems.map((item) => (
                 <OrderItem
@@ -30,8 +30,8 @@ const OrderConfirmation = ({ toggleModal, modalActive, chosenItems, newOrder }) 
               ))}
             </ul>
 
-            <div className='flex justify-between items-center text-rose-900 py-6'>
-              <p>Order total</p>
+            <div className='flex justify-between items-center text-rose-900 mt-6'>
+              <p className='font-semibold'>Order Total</p>
               <p className='font-bold text-2xl'>${totalPrice(chosenItems).toFixed(2)}</p>
             </div>
           </div>
