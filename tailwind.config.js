@@ -50,9 +50,9 @@ export default {
       },
 
       content: {
-        cartIcon: 'url("./assets/images/icon-add-to-cart.svg")',
-        carbonNeutralIcon: 'url("./assets/images/icon-carbon-neutral.svg")',
-        confirmedIcon: 'url("./assets/images/icon-order-confirmed.svg")',
+        cartIcon: 'url("./public/images/icon-add-to-cart.svg")',
+        carbonNeutralIcon: 'url("./public/images/icon-carbon-neutral.svg")',
+        confirmedIcon: 'url("./public/images/icon-order-confirmed.svg")',
       },
     },
   },
