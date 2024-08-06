@@ -1,8 +1,14 @@
-import React from 'react';
+import { useEffect } from 'react';
 import OrderItem from './OrderItem';
 import totalPrice from '../Utilities/calculateTotalPrice';
 
 const OrderConfirmation = ({ toggleModal, modalActive, chosenItems, newOrder }) => {
+  useEffect(() => {
+    if (modalActive) document.body.classList.add('overflow-hidden');
+    console.log('Effect ran');
+    return () => document.body.classList.remove('overflow-hidden');
+  }, [modalActive]);
+
   return (
     <div className={`${modalActive ? 'overlay' : ''}`}>
       <div
